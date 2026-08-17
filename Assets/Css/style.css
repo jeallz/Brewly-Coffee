@@ -429,7 +429,7 @@ main {
                     position: relative;
                     opacity: 0;
                     transition: .2s ease-in-out;
-                    background-color: #00000090;
+                    background-color: #00000050;
                     z-index: 1;
 
                     .text-card {
