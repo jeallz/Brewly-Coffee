@@ -127,10 +127,11 @@ main {
             }
 
             h3 {
-                font-size: 18pt;
+                font-size: 22pt;
                 color: #333;
                 margin-bottom: 4vh;
                 text-align: right;
+                font-weight: 300;
             }
 
             p {
@@ -278,6 +279,225 @@ main {
                 line-height: 1.5;
                 text-align: justify;
                 margin-bottom: 1vh;
+            }
+        }
+    }
+
+    .depoimentos {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10vh;
+
+        .text {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 20vh;
+
+            h2 {
+                font-size: 30pt;
+                color: #856652;
+                text-align: right;
+                margin-bottom: 2vh;
+                position: relative;
+            }
+
+            h2::after {
+                content: " ";
+                width: 9vh;
+                height: 3px;
+                background-color: #856652;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+
+            h3 {
+                font-size: 22pt;
+                font-weight: 300;
+                color: #333;
+                text-align: right;
+            }
+        }
+
+        .cards {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10vh;
+            gap: auto;
+
+            .card {
+                height: auto;
+                width: 350px;
+                display: flex;
+                flex-direction: column;
+                gap: 2vh;
+
+                p {
+                    text-align: justify;
+                    color: #333;
+                }
+
+                div {
+                    width: 100%;
+                    height: 5vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    span {
+                        font-size: 15pt;
+                    }
+
+                    #nome {
+                        font-weight: bold;
+                        color: #222;
+                    }
+
+                    #estrela {
+                        color: #ffd700;
+                        font-size: 20pt;
+                    }
+                }
+            }
+        }
+    }
+
+    .produtos {
+        width: 100%;
+        height: auto;
+
+        .text {
+            width: 100%;
+            height: auto;
+            padding-left: 20vh;
+
+            h2 {
+                font-size: 30pt;
+                color: #856652;
+                margin-bottom: 2vh;
+                position: relative;
+            }
+
+            h2::after {
+                content: " ";
+                width: 9vh;
+                height: 3px;
+                background-color: #856652;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+
+            h3 {
+                font-size: 22pt;
+                font-weight: 300;
+                color: #333;
+            }
+        }
+
+        .cards2 {
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10vh 18vh 10vh 18vh;
+            gap: 10vh;
+
+            .card {
+                width: 300px;
+                height: 300px;
+                border-radius: 10px;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+
+                .card-content {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 10px;
+                    position: relative;
+                    opacity: 0;
+                    transition: .2s ease-in-out;
+                    background-color: #00000090;
+                    z-index: 1;
+
+                    .text-card {
+                        width: 100%;
+                        height: auto;
+                        color: #fff;
+                        position: absolute;
+                        bottom: 0;
+                        padding: 2vh;
+
+                        h3 {
+                            font-size: 30pt;
+                            font-weight: 300;
+                        }
+
+                        h4 {
+                            font-size: 14pt;
+
+                            del {
+                                color: #e93131;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .card:before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: url(../Imgs/banner-produto.webp) center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                z-index: 1;
+                transition: .2s ease-in-out;
+            }
+
+            .card:hover {
+                .card-content {
+                    opacity: 1;
+                }
+            }
+
+            .card:hover:before{
+                filter: blur(1px);
+            }
+        }
+
+        .button {
+            width: 100%;
+            height: auto;
+            display: grid;
+            place-items: center;
+            margin-bottom: 20vh;
+
+            button {
+                cursor: pointer;
+                padding: 1.5vh 8vh 1.5vh 8vh;
+                border: none;
+                border-radius: 10px;
+                font-size: 12pt;
+                color: #fff;
+                background-color: #856652;
+                transition: .3s linear;
+            }
+
+            button:hover {
+                padding: 1.5vh 11vh 1.5vh 11vh;
             }
         }
     }
