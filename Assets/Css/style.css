@@ -72,10 +72,58 @@ main {
         width: 100%;
         height: 100vh;
         padding-top: 9vh;
-        background: url(../Imgs/banner-hero-main.png) fixed;
+        background: url(../Imgs/banner-hero.gif) fixed center;
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
+
+        .content {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 0 20vh 20vh;
+            color: #fff;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.877);
+
+            h2 {
+                font-size: 30pt;
+                color: #856652;
+                margin-bottom: 2vh;
+                position: relative;
+            }
+
+            h2::after {
+                content: " ";
+                width: 9vh;
+                height: 3px;
+                background-color: #856652;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+
+            h3 {
+                font-size: 22pt;
+                color: #fff;
+                margin-bottom: 2vh;
+                font-weight: 300;
+            }
+
+            p {
+                font-size: 12pt;
+                color: #dbdbdb;
+                line-height: 1.5;
+                text-align: justify;
+                margin-bottom: 2vh;
+            }
+            
+            p {
+                padding-bottom: 2vh;
+                text-align: justify;
+            }
+        }
 
         svg {
             position: absolute;
@@ -89,7 +137,7 @@ main {
         padding-top: 5vh;
         display: flex;
 
-        .logo {
+        .img {
             width: 50%;
             height: 100%;
             display: grid;
@@ -409,16 +457,31 @@ main {
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
-            padding: 10vh 18vh 10vh 18vh;
-            gap: 10vh;
+            padding: 10vh 14vh 10vh 14vh;
+            gap: 8vh;
 
             .card {
-                width: 300px;
-                height: 300px;
+                width: 350px;
+                height: 250px;
                 border-radius: 10px;
                 cursor: pointer;
                 position: relative;
                 overflow: hidden;
+
+                .desconto {
+                    position: absolute;
+                    right: 2px;
+                    top: 3px;
+                    background-color: #ffffff70;
+                    z-index: 3;
+                    padding: 8px;
+                    border-radius: 10px;
+                    transform: scale(0.6);
+
+                    span {
+                        color: #11111195;
+                    }
+                }
 
                 .card-content {
                     width: 100%;
@@ -498,6 +561,384 @@ main {
 
             button:hover {
                 padding: 1.5vh 11vh 1.5vh 11vh;
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    padding: 5vh;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+
+    .nav {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10vh 0 10vh;
+
+        .logo {
+            width: 30vh;
+        }
+
+        nav {
+            ul {
+                display: flex;
+                list-style: none;
+                gap: 2vh;
+
+                li {
+                    a {
+                        text-decoration: none;
+                        color: #000;
+                        position: relative;
+                    }
+
+                    a::after {
+                        content: " ";
+                        width: 0;
+                        height: 2px;
+                        background-color: #856652;
+                        bottom: 0;
+                        left: 0;
+                        position: absolute;
+                        transition: .2s linear;
+                    }
+
+                    a:hover::after {
+                        width: 100%;
+                    }
+
+                    a:hover {
+                        color: #856652;
+                    }
+                }
+            }
+        }
+
+        .adress {
+            width: 30vh;
+        }
+    }
+}
+
+/* Dispositivos móveis */
+
+@media (max-width: 1600px) {
+    main {
+        .sobre {
+            .img {
+                img {
+                    transform: scale(0.8);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1500px) {
+    main {
+        .hero {
+            .content {
+                width: 100%;
+                padding: 0 20vh 20vh 20vh;
+            }
+        }
+
+        .sobre {
+            height: auto;
+
+            .img {
+                display: none;
+            }
+
+            .content {
+                width: 100%;
+                padding: 8vh 20vh 8vh 20vh;
+            }
+        }
+    }
+}
+
+@media (max-width: 1320px) {
+    main {
+        .campos {
+            height: 160vh;
+            flex-direction: column;
+
+            .content {
+                width: 100%;
+                height: 50%;
+                margin-top: 15vh;
+                padding: 8vh 20vh 8vh 20vh;
+            } 
+
+            .image {
+                width: 100%;
+                height: 50%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1150px) {
+    footer {
+        .nav {
+            display: flex;
+            flex-wrap: wrap;
+
+            .logo {
+                width: 50%;
+            }
+
+            nav {
+                width: 50%;
+                display: flex;
+                justify-content: right;
+            }
+
+            .adress {
+                width: 100%;
+                margin-top: 5vh;
+            }
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    main {
+        .hero {
+            .content {
+                padding: 0 10vh 10vh 10vh;
+            }
+        }
+
+        .sobre {
+            .content {
+                padding: 8vh 10vh 8vh 10vh;
+            }
+        }
+
+        .campos {
+            .content {
+                padding: 8vh 10vh 8vh 10vh;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    footer {
+        .nav {
+            nav {
+                width: 50%;
+                height: 100%;
+
+                ul {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 780px) {
+    footer {
+        .nav {
+            .logo {
+                width: 100%;
+                padding-bottom: 5vh;
+            }
+
+            nav {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    main {
+        .depoimentos, .produtos {
+            .text {
+                padding: 2vh 10vh 2vh 10vh;
+            }
+        }
+    }
+}
+
+@media (max-width: 730px) {
+    main {
+        .hero {
+            height: 120vh;
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    header {
+        height: 14vh;
+        flex-direction: column;
+        justify-content: space-around;
+        padding-bottom: 1vh;
+
+        .logo {
+            img {
+                width: 150px;
+            }
+        }
+
+        .links {
+            ul {
+                li {
+                    a {
+                        font-size: 11pt;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    footer {
+       .nav {
+            padding: 0 5vh 0 5vh;
+       } 
+    }
+}
+
+@media (max-width: 540px) {
+    * {
+        h2 {
+            font-size: 25pt !important;
+        }
+
+        h3 {
+            font-size: 16pt !important;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    main {
+        .produtos {
+            .cards2 {
+                padding: 5vh 8vh 5vh 8vh;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        .cards {
+            padding: 10vh 5vh 10vh 5vh;
+        }
+    }
+}
+
+@media (max-width: 470px) {
+    main {
+        .hero {
+            height: 100vh;
+
+            .content {
+                padding: 0 5vh 10vh 5vh;
+
+                #p2 {
+                    display: none;
+                }
+            }
+        }
+
+        .sobre {
+            .content {
+                padding: 8vh 5vh 8vh 5vh;
+            }
+        }
+
+        .campos {
+            .content {
+                padding: 8vh 5vh 8vh 5vh;
+            }
+        }
+
+        .depoimentos {
+            .text {
+                padding-right: 5vh;
+            }
+
+            .cards {
+                padding: 5vh;
+            }
+        }
+
+        .produtos {
+            .text {
+                padding-left: 5vh;
+            }
+        }
+
+        * {
+            p {
+                font-size: 11pt !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    footer {
+        .nav {
+            .logo {
+                display: grid;
+                place-items: center;
+            }
+
+            nav {
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 417px) {
+    main {
+        .cards {
+            .card {
+                .icon {
+                    img {
+                        width: 50px;
+                    }
+                }
+
+                .content {
+                    h4 {
+                        font-size: 12pt;
+                    } 
+
+                    p {
+                        font-size: 10pt;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 410px) {
+    main {
+        .produtos {
+            .cards2 {
+                padding: 5vh 4vh 5vh 4vh;
             }
         }
     }
