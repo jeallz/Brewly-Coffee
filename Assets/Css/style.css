@@ -77,51 +77,57 @@ main {
         background-size: cover;
         position: relative;
 
-        .content {
-            width: 50%;
+        .filter {
+            width: 100%;
             height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 0 0 20vh 20vh;
-            color: #fff;
-            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.877);
+            background-color: #00000070;
 
-            h2 {
-                font-size: 30pt;
-                color: #856652;
-                margin-bottom: 2vh;
-                position: relative;
-            }
-
-            h2::after {
-                content: " ";
-                width: 9vh;
-                height: 3px;
-                background-color: #856652;
-                position: absolute;
-                left: 0;
-                bottom: 0;
-            }
-
-            h3 {
-                font-size: 22pt;
+            .content {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 0 20vh 20vh;
                 color: #fff;
-                margin-bottom: 2vh;
-                font-weight: 300;
-            }
+                text-shadow: 0 1px 4px rgba(0, 0, 0, 0.877);
 
-            p {
-                font-size: 12pt;
-                color: #dbdbdb;
-                line-height: 1.5;
-                text-align: justify;
-                margin-bottom: 2vh;
-            }
-            
-            p {
-                padding-bottom: 2vh;
-                text-align: justify;
+                h2 {
+                    font-size: 30pt;
+                    color: #856652;
+                    margin-bottom: 2vh;
+                    position: relative;
+                }
+
+                h2::after {
+                    content: " ";
+                    width: 9vh;
+                    height: 3px;
+                    background-color: #856652;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                }
+
+                h3 {
+                    font-size: 22pt;
+                    color: #fff;
+                    margin-bottom: 2vh;
+                    font-weight: 300;
+                }
+
+                p {
+                    font-size: 12pt;
+                    color: #dbdbdb;
+                    line-height: 1.5;
+                    text-align: justify;
+                    margin-bottom: 2vh;
+                }
+                
+                p {
+                    padding-bottom: 2vh;
+                    text-align: justify;
+                }
             }
         }
 
@@ -897,11 +903,6 @@ footer {
 @media (max-width: 440px) {
     footer {
         .nav {
-            .logo {
-                display: grid;
-                place-items: center;
-            }
-
             nav {
                 align-items: center;
                 justify-content: center;
@@ -941,5 +942,11 @@ footer {
                 padding: 5vh 4vh 5vh 4vh;
             }
         }
+    }
+}
+
+@media (max-width: 400px) {
+    footer {
+        padding: 5vh 1vh 5vh 1vh;
     }
 }
