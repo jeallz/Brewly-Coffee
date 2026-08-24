@@ -71,7 +71,6 @@ main {
     .hero {
         width: 100%;
         height: 100vh;
-        padding-top: 9vh !important;
         background: url(../Imgs/banner-hero.gif) fixed center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -83,6 +82,7 @@ main {
             background-color: #00000070;
 
             .content {
+                padding-top: 9vh !important;
                 width: 50%;
                 height: 100%;
                 display: flex;
@@ -796,10 +796,12 @@ footer {
 
 @media (max-width: 1500px) {
     main {
-        .hero {
-            .content {
-                width: 100%;
-                padding: 0 20vh 20vh 20vh;
+        .hero { 
+            .filter {
+                .content {
+                    width: 100%;
+                    padding: 0 20vh 20vh 20vh;
+                }
             }
         }
 
@@ -866,8 +868,10 @@ footer {
 @media (max-width: 950px) {
     main {
         .hero {
-            .content {
-                padding: 0 10vh 10vh 10vh;
+            .filter {
+                .content {
+                    padding: 0 10vh 10vh 10vh;
+                }
             }
         }
 
@@ -1032,11 +1036,13 @@ footer {
         .hero {
             height: 100vh;
 
-            .content {
-                padding: 0 5vh 10vh 5vh;
+            .filter {
+                .content {
+                    padding: 0 5vh 10vh 5vh;
 
-                #p2 {
-                    display: none;
+                    #p2 {
+                        display: none;
+                    }
                 }
             }
         }
