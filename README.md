@@ -41,8 +41,8 @@ Os efeitos de onda presentes em algumas divisões do site foram obtidos através
 Por mais que não tenha sido solicitado, hospedamos o app utilizando o Vercel, que é uma hospedagem gratuita, e os serviços de DNS da Cloud Flare, e pode ser acessado através de [https://brewly-coffee-three.vercel.app/](https://brewly-coffee-three.vercel.app/)
 
 <p align="flex">
-<img width="500" alt="image" src="https://github.com/user-attachments/assets/2f5d78f2-53f8-4868-8210-d7974ee6b4ef" />
-<img width="500" alt="image" src="https://github.com/user-attachments/assets/f6a9295d-7b5e-4e94-a7e6-7292ad035c70" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/2f5d78f2-53f8-4868-8210-d7974ee6b4ef" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/f6a9295d-7b5e-4e94-a7e6-7292ad035c70" />
 </p>
 
 ## Os autores

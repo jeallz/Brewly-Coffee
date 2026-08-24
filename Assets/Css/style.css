@@ -529,7 +529,7 @@ main {
                 content: "";
                 position: absolute;
                 inset: 0;
-                background: url(../Imgs/banner-produto.webp) center;
+                background: url(../Imgs/produtos/produto.jpeg) center;
                 background-repeat: no-repeat;
                 background-size: cover;
                 z-index: 1;
@@ -596,7 +596,7 @@ main {
 
             iframe {
                 width: 100%;
-                height: 60vh;
+                height: 70vh;
             }
         }
 
@@ -618,13 +618,16 @@ main {
                 .text {
                     width: 100%;
                     height: auto;
-                    padding-bottom: 4vh;
+                    padding-bottom: 6vh;
+                    display: flex;
+                    flex-direction: column;
 
                     h2 {
                         font-size: 25pt;
                         color: #856652;
                         margin-bottom: 2vh;
                         position: relative;
+                        text-align: right;
                     }
 
                     h2::after {
@@ -633,7 +636,7 @@ main {
                         height: 3px;
                         background-color: #856652;
                         position: absolute;
-                        left: 0;
+                        right: 0;
                         bottom: 0;
                     }
 
@@ -641,6 +644,7 @@ main {
                         font-size: 15pt;
                         font-weight: 300;
                         color: #333;
+                        text-align: right;
                     }
                 }
 
@@ -654,6 +658,7 @@ main {
                     border: none;
                     outline: none;
                     margin-bottom: 1vh;
+                    font-size: 12pt;
                 }
 
                 textarea {
@@ -661,6 +666,7 @@ main {
                     border: none;
                     outline: none;
                     padding: 1vh;
+                    font-size: 12pt;
                 }
 
                 #input, #textarea {
@@ -716,6 +722,79 @@ main {
                     align-items: left;
                     justify-content: center;
                 }
+            }
+        }
+    }
+
+    .historia {
+        width: 100%;
+        height: auto;
+        padding-top: 15vh;
+
+        .text {
+            padding-right: 20vh;
+
+            h2 {
+                font-size: 30pt;
+                color: #856652;
+                margin-bottom: 2vh;
+                position: relative;
+                text-align: right;
+            }
+
+            h2::after {
+                content: " ";
+                width: 9vh;
+                height: 3px;
+                background-color: #856652;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+
+            h3 {
+                font-size: 22pt;
+                font-weight: 300;
+                color: #333;
+                text-align: right;
+            }
+        }
+
+        .texto {
+            width: 100%;
+            padding: 10vh 20vh;
+            display: flex;
+            gap: 5vh;
+
+            p {
+                text-align: justify;
+                column-count: 2;
+                column-gap: 5vh;
+                font-size: 13pt;
+                line-height: 25px;
+            }
+        }
+
+        .banner-history {
+            width: 100%;
+            height: 110vh;
+            background: url(../Imgs/historia/imagem2.png) center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+
+            svg {
+                position: absolute;
+            }
+
+            #svg1 {
+                top: 0;
+                left: 0;
+            }
+
+            #svg2 {
+                bottom: 0;
+                left: 0;
             }
         }
     }
@@ -841,6 +920,18 @@ footer {
     }
 }
 
+@media (max-width: 1120px) {
+    .historia {
+        .texto {
+            padding: 10vh 10vh !important;
+
+            p {
+                font-size: 11pt !important;
+            }
+        }
+    }
+}
+
 @media (max-width: 1150px) {
     footer {
         .nav {
@@ -905,6 +996,24 @@ footer {
             }
         }
     }
+
+    main {
+        .historia {
+            .text {
+                padding-right: 10vh;
+            }
+
+            .texto {
+                p {
+                    column-count: 1;
+                }
+            }
+
+            .banner-history {
+                height: 70vh;
+            }
+        }
+    }
 }
 
 @media (max-width: 780px) {
@@ -927,6 +1036,18 @@ footer {
         .depoimentos, .produtos {
             .text {
                 padding: 2vh 10vh 2vh 10vh;
+            }
+        }
+
+        .historia {
+            .text {
+                h2 {
+                    font-size: 23pt;
+                }
+
+                h3 {
+                    font-size: 18pt;
+                }
             }
         }
     }
@@ -963,6 +1084,12 @@ footer {
             }
         }
     }
+
+    main {
+        .historia {
+            padding-top: 20vh;
+        }
+    }
 }
 
 @media (max-width: 600px) {
@@ -970,6 +1097,18 @@ footer {
        .nav {
             padding: 0 5vh 0 5vh;
        } 
+    }
+
+    main {
+        .historia {
+            .text {
+                padding-right: 5vh;
+            }
+
+            .texto {
+                padding: 5vh !important;
+            }
+        }
     }
 }
 
