@@ -28,7 +28,7 @@ O projeto foi upado na plataforma github, conforme solicitado em sala de aula. T
 
 ## Utilização de ferramentas externas / autorais
 
-As imagens/banners/gifs foram obtidos através de sites externos, portanto, possuem direitos autorais. Mas não afetam em nada no projeto, já que se trata de uma marca fictícia e o mesmo não será públicado.
+As imagens/banners/gifs foram obtidos através de sites externos, portanto, possuem direitos autorais. Mas não afetam em nada no projeto, já que se trata de uma marca fictícia e o mesmo não será públicado
 
 Os ícones foram obtidos através do site [FLATICON](https://www.flaticon.com/), onde artistas postam suas artes para que sejam usadas de forma livre.
 
