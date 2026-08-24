@@ -1465,4 +1465,64 @@ footer {
     }
 }
 
-/* Página de contatdo */
+@media (max-height: 750px) and (max-width: 1500px) {
+    main {
+        .hero {
+            .filter {
+                .content {
+                    width: 65%;
+                
+                }
+            }
+        }
+    }
+
+    * {
+        h2 {
+            font-size: 24pt !important;
+        }
+
+        h3 {
+            font-size: 18pt !important;
+        }
+
+        p {
+            font-size: 11pt !important;
+        }
+    }
+}
+
+@media (max-height: 750px) and (max-width: 1300px) {
+    main {
+        .hero {
+            .filter {
+                .content {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-height: 750px) {
+    header {
+        .logo {
+            a {
+                img {
+                    width: 150px !important;
+                }
+            }
+        }
+
+        .links {
+            ul {
+                li {
+                    a {
+                        font-size: 12pt;
+                    }
+                }
+            }
+        }
+    }
+}
