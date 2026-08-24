@@ -798,6 +798,144 @@ main {
             }
         }
     }
+
+    .compra {
+        width: 100%;
+        height: auto;
+        padding-top: 15vh;
+        padding: 20vh 20vh;
+        display: flex;
+
+        .search {
+            border-radius: 10px;
+            box-shadow: 1px 1px 15px #00000060;
+            padding: 4vh;
+            height: 350px;
+
+            form {
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                gap: 2vh;
+
+                #inp1 {
+                    width: 100%;
+                    padding: 1vh;
+                }
+
+                div {
+                    #inp2 {
+                        width: 47%;
+                        padding: 1vh;
+                    }
+                }
+
+                input {
+                    border-radius: 10px;
+                    border: 1px solid #00000050;
+                }
+
+                .categorias {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 1vh;
+                    flex-wrap: wrap;
+                }
+            }
+        }
+
+        .conteudo {
+            width: 100%;
+            height: auto;
+            padding-left: 10vh;
+            display: flex;
+            gap: 5vh;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .card {
+                width: 300px;
+                height: 250px;
+                border-radius: 10px;
+                cursor: pointer;
+                position: relative;
+                overflow: hidden;
+
+                .desconto {
+                    position: absolute;
+                    right: 2px;
+                    top: 3px;
+                    background-color: #ffffff70;
+                    z-index: 3;
+                    padding: 8px;
+                    border-radius: 10px;
+                    transform: scale(0.6);
+
+                    span {
+                        color: #11111195;
+                    }
+                }
+
+                .card-content {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 10px;
+                    position: relative;
+                    opacity: 0;
+                    transition: .2s ease-in-out;
+                    background-color: #00000050;
+                    z-index: 1;
+
+                    .text-card {
+                        width: 100%;
+                        height: auto;
+                        color: #fff;
+                        position: absolute;
+                        bottom: 0;
+                        padding: 2vh;
+
+                        h3 {
+                            font-size: 30pt;
+                            font-weight: 300;
+                        }
+
+                        h4 {
+                            font-size: 14pt;
+
+                            del {
+                                color: #e93131;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .card:before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: url(../Imgs/produtos/produto.jpeg) center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                z-index: 1;
+                transition: .2s ease-in-out;
+            }
+
+            .card:hover {
+                .card-content {
+                    opacity: 1;
+                }
+            }
+
+            .card:hover:before{
+                filter: blur(1px);
+            }
+        }
+    }
 }
 
 footer {
@@ -899,6 +1037,14 @@ footer {
     }
 }
 
+@media (max-width: 1450px) {
+    main {
+        .compra {
+            padding: 20vh 10vh;
+        }
+    }
+}
+
 @media (max-width: 1320px) {
     main {
         .campos {
@@ -975,6 +1121,21 @@ footer {
         .campos {
             .content {
                 padding: 8vh 10vh 8vh 10vh;
+            }
+        }
+    }
+}
+
+@media (max-width: 920px) {
+    main {
+        .compra {
+            flex-direction: column;
+            gap: 10vh;
+            align-items: center;
+
+
+            .conteudo {
+                padding-left: 0;
             }
         }
     }
@@ -1228,6 +1389,23 @@ footer {
             nav {
                 align-items: center;
                 justify-content: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    main {
+        .compra {
+            padding: 20vh 1vh;
+
+            .search {
+                width: 100%;
+                height: auto;
+
+                form {
+                    transform: scale(0.9);
+                }
             }
         }
     }
